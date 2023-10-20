@@ -7,6 +7,7 @@
 		"name": "Pasi Kemppainen",
 		"email": "pasi.kemppainen@taion.fi"
 	},
+	"publisher": "TaionOy",
 	"license": "MIT",
 	"engines": {
 		"vscode": "^1.83.0"
