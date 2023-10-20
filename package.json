@@ -1,0 +1,60 @@
+{
+	"name": "smartrenameandreplace",
+	"version": "1.0.0",
+	"displayName": "SmartRenameAndReplace",
+	"description": "Replace given text in file content and file names case independently",
+	"author": {
+		"name": "Pasi Kemppainen",
+		"email": "pasi.kemppainen@taion.fi"
+	},
+	"license": "MIT",
+	"engines": {
+		"vscode": "^1.83.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "smartrenameandreplace.smartRenameAndReplace",
+				"title": "Smart Rename & Replace"
+			}
+		],
+		"menus": {
+			"explorer/context": [
+				{
+					"command": "smartrenameandreplace.smartRenameAndReplace",
+					"group": "7_modification"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/mocha": "10.0.3",
+		"@types/node": "20.8.7",
+		"@types/underscore.string": "0.0.40",
+		"@types/vscode": "1.83.1",
+		"@typescript-eslint/eslint-plugin": "6.8.0",
+		"@typescript-eslint/parser": "6.8.0",
+		"@vscode/test-electron": "2.3.5",
+		"eslint": "8.51.0",
+		"glob": "10.3.10",
+		"mocha": "10.2.0",
+		"typescript": "5.2.2"
+	},
+	"dependencies": {
+		"minimatch": "9.0.3",
+		"underscore.string": "3.3.6"
+	}
+}
